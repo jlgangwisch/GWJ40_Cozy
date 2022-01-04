@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Materials/WaterShader.material" type="Material" id=2]
+
+[sub_resource type="PlaneMesh" id=1]
+material = ExtResource( 2 )
+size = Vector2( 10, 10 )
+subdivide_width = 100
+subdivide_depth = 100
+
+[node name="NoiseTerrain" type="Spatial"]
+
+[node name="WaterMesh" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.659562, 0 )
